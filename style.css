@@ -121,7 +121,7 @@ section {
     width: 100%;
     height: 100%;
     z-index: 5; /* Mantém o overlay abaixo do conteúdo da página */
-    pointer-events: painted; /* Garante que o overlay não interfira na interação com o conteúdo */
+    pointer-events: auto; /* Garante que o overlay não interfira na interação com o conteúdo */
 }
 
 
