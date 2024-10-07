@@ -113,6 +113,14 @@ section {
     background-color: #333;
 }
 
+.verse-container.hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #333;
+}
+
+
 .verse-container::before {
     content: "";
     position: absolute;
