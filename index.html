@@ -6,15 +6,24 @@
     <title>Bem Aventurado</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <style>
+        
+    </style>
 </head>
 <body>
     <h1>Sua Jornada Rumo a Ser <strong>Bem-Aventurado</strong> Começa Agora!</h1>
     <h2>Todas as bem-aventuranças da biblia</h2>
     <h3>Estude, medite e aplique os ensinamentos da bíblia para viver uma vida cheia de bênçãos.</h3>
+    <nav class="nav-buttons">
+        <button class="nav-button" data-target="salmos">Salmos</button>
+        <button class="nav-button" data-target="mateus">Mateus</button>
+        <button class="nav-button" data-target="lucas">Lucas</button>
+        <button class="nav-button" data-target="apocalipse">Apocalipse</button>
+    </nav>
 
-    <section class="salmos">
+    <section class="content" id="salmos">
         <div>
-            <h1 class="div salmos">Salmos</h1>
+            <h1 class="div">Salmos</h1>
         </div>
         <div class="verse-container">
             <h4>Salmo 1:1</h4>
@@ -132,6 +141,8 @@
             <p class="application"><strong>Aplicação:</strong> A esperança em Deus é a base da felicidade e segurança.</p>
             <span class="emoji">🛡️ Esperança em Deus protege.</span>
         </div>
+    </section>
+        <section class="content" id="mateus">
         <div>
             <h1 class="div">Mateus</h1>
         </div>
@@ -224,11 +235,13 @@
             <p class="application"><strong>Aplicação:</strong> A fidelidade no serviço ao Senhor até o fim será recompensada.</p>
             <span class="emoji">⏳ Fidelidade até o fim.</span>
         </div> 
+        </section>
+        <section class="content" id="lucas">
         <div>
             <h1 class="div">Lucas</h1>
         </div>      
         <!-- Lucas 1:45 -->
-<div class="verse-container">
+<div class="verse-container" >
     <h4>Lucas 1:45</h4>
     <p>E bem-aventurada a que creu, pois hão de cumprir-se as coisas que da parte do Senhor lhe foram ditas.</p>
     <p class="application"><strong>Aplicação:</strong> A confiança nas promessas de Deus traz a verdadeira felicidade.</p>
@@ -333,7 +346,8 @@
     <p class="application"><strong>Aplicação:</strong> Em tempos de julgamento, a ausência de filhos será considerada uma bênção.</p>
     <span class="emoji">⚖️ Julgamento e bênçãos inesperadas.</span>
 </div>
-
+</section>
+<section class="content" id="apocalipse">
 <div>
     <h1 class="div">Apocalipse</h1>
 </div>  
@@ -392,9 +406,6 @@
     <p class="application"><strong>Aplicação:</strong> A pureza em Cristo garante a entrada no Reino eterno e a participação na vida eterna.</p>
     <span class="emoji">🌳 Entrada na vida eterna.</span>
 </div>
-
-            
-    </section>
-    
+</section>
 </body>
 </html>

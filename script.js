@@ -27,3 +27,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add scroll event listener
     window.addEventListener('scroll', toggleHoverClass);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.nav-button');
+    const contents = document.querySelectorAll('.content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            
+            // Remove a classe 'active' de todos os botões
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Adiciona a classe 'active' ao botão clicado
+            this.classList.add('active');
+
+            contents.forEach(content => {
+                if (content.id === target) {
+                    content.classList.add('active');
+                    const firstVerseContainer = content.querySelector('.div');
+                    if (firstVerseContainer) {
+                        firstVerseContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Mostrar o primeiro conteúdo por padrão e ativar o primeiro botão
+    contents[0].classList.add('active');
+    buttons[0].classList.add('active');
+});

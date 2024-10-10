@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Bíblica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .nav-buttons {
+                flex-direction: column;
+            }
+            .nav-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <button class="nav-button" data-target="salmos">Salmos</button>
+        <button class="nav-button" data-target="mateus">Mateus</button>
+        <button class="nav-button" data-target="lucas">Lucas</button>
+        <button class="nav-button" data-target="apocalipse">Apocalipse</button>
+    </div>
+
+    <div id="salmos" class="content">
+        <h2>Salmos</h2>
+        <p>Conteúdo dos Salmos aqui...</p>
+    </div>
+    <div id="mateus" class="content">
+        <h2>Mateus</h2>
+        <p>Conteúdo de Mateus aqui...</p>
+    </div>
+    <div id="lucas" class="content">
+        <h2>Lucas</h2>
+        <p>Conteúdo de Lucas aqui...</p>
+    </div>
+    <div id="apocalipse" class="content">
+        <h2>Apocalipse</h2>
+        <p>Conteúdo do Apocalipse aqui...</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.nav-button');
+            const contents = document.querySelectorAll('.content');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    contents.forEach(content => {
+                        if (content.id === target) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Mostrar o primeiro conteúdo por padrão
+            contents[0].classList.add('active');
+        });
+    </script>
+</body>
+</html>

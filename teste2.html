@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Bíblica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .content.active {
+            display: block;
+        }
+        .verse-container {
+            margin-top: 20px;
+        }
+        .application {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .nav-buttons {
+                flex-direction: column;
+            }
+            .nav-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-buttons">
+        <button class="nav-button" data-target="salmos">Salmos</button>
+        <button class="nav-button" data-target="mateus">Mateus</button>
+        <button class="nav-button" data-target="lucas">Lucas</button>
+        <button class="nav-button" data-target="apocalipse">Apocalipse</button>
+    </nav>
+
+    <section class="content" id="salmos">
+        <div>
+            <h1 class="div salmos">Salmos</h1>
+        </div>
+        <div class="verse-container">
+            <h4>Salmo 1:1</h4>
+            <p>Bem-aventurado o homem que não anda no conselho dos ímpios, não se detém no caminho dos pecadores, nem se assenta na roda dos escarnecedores.</p>
+            <p class="application"><strong>Aplicação:</strong> A verdadeira felicidade está em evitar a influência do mal e buscar a orientação de Deus.</p>
+            <span class="emoji">🌱 Caminhe no caminho certo!</span>
+        </div>
+    </section>
+
+    <section class="content" id="mateus">
+        <div>
+            <h1 class="div mateus">Mateus</h1>
+        </div>
+        <!-- Adicione o conteúdo de Mateus aqui -->
+    </section>
+
+    <section class="content" id="lucas">
+        <div>
+            <h1 class="div lucas">Lucas</h1>
+        </div>
+        <!-- Adicione o conteúdo de Lucas aqui -->
+    </section>
+
+    <section class="content" id="apocalipse">
+        <div>
+            <h1 class="div apocalipse">Apocalipse</h1>
+        </div>
+        <!-- Adicione o conteúdo de Apocalipse aqui -->
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.nav-button');
+            const contents = document.querySelectorAll('.content');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    contents.forEach(content => {
+                        if (content.id === target) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Mostrar o primeiro conteúdo por padrão
+            contents[0].classList.add('active');
+        });
+    </script>
+</body>
+</html>
