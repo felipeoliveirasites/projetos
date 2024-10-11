@@ -11,7 +11,7 @@ const urlsToCache = [
 ];
 
 // Instalar o service worker
-/* self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -19,10 +19,10 @@ const urlsToCache = [
         return cache.addAll(urlsToCache);
       })
   );
-}); */
+});
 
 // Ativar o service worker
-/* self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -35,9 +35,9 @@ const urlsToCache = [
       );
     })
   );
-}); */
+});
 
-/* // Interceptar e responder a solicitações de rede
+// Interceptar e responder a solicitações de rede
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -49,4 +49,3 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
- */
