@@ -11,7 +11,7 @@ const urlsToCache = [
 ];
 
 // Instalar o service worker
-self.addEventListener('install', (event) => {
+/* self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -19,10 +19,10 @@ self.addEventListener('install', (event) => {
         return cache.addAll(urlsToCache);
       })
   );
-});
+}); */
 
 // Ativar o service worker
-self.addEventListener('activate', (event) => {
+/* self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -35,7 +35,7 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-});
+}); */
 
 /* // Interceptar e responder a solicitações de rede
 self.addEventListener('fetch', (event) => {
