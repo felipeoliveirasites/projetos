@@ -1,7 +1,7 @@
 {
     "name": "Bem Aventurado",
     "short_name": "Bem Aventurado",
-    "start_url": "/",
+    "start_url": "/projetos",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
