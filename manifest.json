@@ -1,0 +1,21 @@
+{
+    "name": "Bem Aventurado",
+    "short_name": "Bem Aventurado",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "/icones/pwa_icon_192x192b.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icones/pwa_icon_512x512a.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  
