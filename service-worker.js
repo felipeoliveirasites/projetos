@@ -1,13 +1,13 @@
 const CACHE_NAME = 'bem-aventurado-cache-v1';
 const urlsToCache = [
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/manifest.json',
-  '/service-worker.js',
-  '/icones/pwa_icon_192x192b.png',
-  '/icones/pwa_icon_512x512a.png',
-  '/felicidade.webp'
+  '/projetos/index.html',
+  '/projetos/style.css',
+  '/projetos/script.js',
+  '/projetos/manifest.json',
+  '/projetos/service-worker.js',
+  '/projetos/icones/pwa_icon_192x192b.png',
+  '/projetos/icones/pwa_icon_512x512a.png',
+  '/projetos/felicidade.webp'
 ];
 
 // Instalar o service worker
