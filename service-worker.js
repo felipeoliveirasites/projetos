@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bem-aventurado-cache-v29';
+const CACHE_NAME = 'bem-aventurado-cache-v30';
 const urlsToCache = [
   '/projetos/index.html',
   '/projetos/style.css',
@@ -23,7 +23,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Ativar o service worker
+/* // Ativar o service worker
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -50,4 +50,24 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request); // Tenta fazer a solicitação na rede
       })
   );
+}); */
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        if (networkResponse && networkResponse.ok) {
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone()); // Atualiza o cache
+          });
+        }
+        return networkResponse; // Retorna a resposta da rede
+      });
+
+      // Retorna a resposta do cache, mas ainda tenta buscar a versão mais recente
+      return cachedResponse || fetchPromise;
+    })
+  );
 });
+
+
