@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 30px 0px;
     backdrop-filter: brightness(0.5);
+    position: relative;
 }
 
 h1, h2, h3 {
