@@ -16,7 +16,17 @@ body {
     margin: 0;
     padding: 30px 0px;
     backdrop-filter: brightness(0.5);
-    position: relative;
+}
+div.install-banner {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: white;
+    padding: 12px;
+    text-align: center;
 }
 
 h1, h2, h3 {
