@@ -1,35 +1,39 @@
 {
-    "name": "Bem Aventurado",
-    "short_name": "Bem Aventurado",
-    "start_url": "/projetos",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
-    "icons": [
-      {
-        "src": "/projetos/icones/pwa_icon_192x192b.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/projetos/icones/pwa_icon_512x512a.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "screenshots": [
-      {
-        "src": "/captura-de-tela_desktop.png",
-        "sizes": "1342x616",
-        "type": "image/png",
-        "form_factor": "wide"
-      },
-      {
-        "src": "/captura-de-tela-mobile.jpeg",
-        "sizes": "540x1200",
-        "type": "image/jpeg",
-        "form_factor": "narrow"
-      }
-    ] 
-  }
-  
+  "name": "Bem Aventurado",
+  "short_name": "Bem Aventurado",
+  "start_url": "/projetos",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/projetos/icones/pwa_icon_192x192b.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/projetos/icones/pwa_icon_512x512a.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "splash_screen": {
+    "url": "/projetos/captura-de-tela-mobile.jpeg",
+    "background_color": "#ffffff"
+  },
+  "screenshots": [
+    {
+      "src": "/projetos/captura-de-tela_desktop.png",
+      "sizes": "1342x616",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/projetos/captura-de-tela-mobile.jpeg",
+      "sizes": "540x1200",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "orientation": "portrait"
+}
