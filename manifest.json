@@ -18,18 +18,18 @@
     }
   ],
   "splash_screen": {
-    "url": "/projetos/captura-de-tela-mobile.jpeg",
+    "url": "/projetos/img/captura-de-tela-mobile.jpeg",
     "background_color": "#ffffff"
   },
   "screenshots": [
     {
-      "src": "/projetos/captura-de-tela_desktop.png",
+      "src": "/projetos/img/captura-de-tela_desktop.png",
       "sizes": "1342x616",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "/projetos/captura-de-tela-mobile.jpeg",
+      "src": "/projetos/img/captura-de-tela-mobile.jpeg",
       "sizes": "540x1200",
       "type": "image/jpeg",
       "form_factor": "narrow"

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bem-aventurado-cache-v10';
+const CACHE_NAME = 'bem-aventurado-cache-v11';
 const urlsToCache = [
   '/projetos/index.html',
   '/projetos/style.css',
@@ -8,8 +8,8 @@ const urlsToCache = [
   '/projetos/icones/pwa_icon_192x192b.png',
   '/projetos/icones/pwa_icon_512x512a.png',
   '/projetos/felicidade.webp',
-  '/projetos/captura-de-tela_desktop.png',
-  '/projetos/captura-de-tela-mobile.jpeg'
+  '/projetos/img/captura-de-tela_desktop.png',
+  '/projetos/img/captura-de-tela-mobile.jpeg'
 ];
 
 // Instalar o service worker
