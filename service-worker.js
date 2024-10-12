@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bem-aventurado-cache-v31';
+const CACHE_NAME = 'bem-aventurado-cache-v32';
 const urlsToCache = [
   '/projetos/index.html',
   '/projetos/style.css',
@@ -74,11 +74,14 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       const fetchPromise = fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.ok) {
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, networkResponse.clone()); // Atualiza o cache
-          });
-        }
+        // Clona a resposta da rede
+        const responseToCache = networkResponse.clone();
+
+        // Atualiza o cache com a nova resposta
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache); // Armazena a resposta clonada
+        });
+
         return networkResponse; // Retorna a resposta da rede
       });
 
@@ -87,5 +90,6 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
 
 
