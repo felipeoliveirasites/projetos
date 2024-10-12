@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bem-aventurado-cache-v32';
+const CACHE_NAME = 'bem-aventurado-cache-v33';
 const urlsToCache = [
   '/projetos/index.html',
   '/projetos/style.css',
@@ -23,35 +23,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-/* // Ativar o service worker
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Limpando cache antigo');
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-
-// Interceptar e responder a solicitações de rede
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response; // Retorna do cache
-        }
-        return fetch(event.request); // Tenta fazer a solicitação na rede
-      })
-  );
-}); */
-
 
 // Ativar o service worker
 self.addEventListener('activate', (event) => {
@@ -72,6 +43,20 @@ self.addEventListener('activate', (event) => {
 // Interceptar e responder a solicitações de rede
 self.addEventListener('fetch', (event) => {
   event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response; // Retorna do cache
+        }
+        return fetch(event.request); // Tenta fazer a solicitação na rede
+      })
+  );
+});
+
+
+/* // Interceptar e responder a solicitações de rede
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       const fetchPromise = fetch(event.request).then((networkResponse) => {
         // Clona a resposta da rede
@@ -89,7 +74,7 @@ self.addEventListener('fetch', (event) => {
       return cachedResponse || fetchPromise;
     })
   );
-});
+}); */
 
 
 
