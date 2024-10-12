@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     content.classList.add('active');
                     const firstVerseContainer = content.querySelector('.div');
                     if (firstVerseContainer) {
-                        firstVerseContainer.scrollIntoView({ behavior: 'auto', block: 'start' });
+                        firstVerseContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 } else {
                     content.classList.remove('active');
