@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bem-aventurado-cache-v40';
+const CACHE_NAME = 'bem-aventurado-cache-v42';
 const urlsToCache = [
   '/projetos/index.html',
   '/projetos/style.css',
