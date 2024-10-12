@@ -18,17 +18,6 @@ body {
     backdrop-filter: blur(5px);
     backdrop-filter: brightness(0.5);
 }
-div.install-banner {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #333;
-    color: white;
-    padding: 12px;
-    text-align: center;
-}
 
 h1, h2, h3 {
     text-align: center;
